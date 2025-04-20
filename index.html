@@ -58,6 +58,32 @@
     .download-btn:hover {
         background-color: #005ecb; /* Darker blue on hover */
     }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .donate-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #009cde;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    .donate-btn:hover {
+      background-color: #008ac5;
+    }
+    .donate-btn img {
+      height: 1em;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
     .features-screenshot {
       display: flex;
       flex-wrap: wrap;
@@ -146,7 +172,13 @@
     <h2>Simple. Automatic. Reliable.</h2>
     <p>Tired of terrible Bluetooth microphone quality on your Mac? This app automatically detects when your Bluetooth headphones connect and instantly switches the audio input to your Mac's built-in microphone. Enjoy clear audio without manual adjustments!</p>
 
-    <a class="download-btn" href="https://github.com/dunelly/Bluetooth-Mic-Switch/releases/download/v1.0.0/BluetoothMicSwitch.dmg">Download for macOS</a>
+    <div class="button-group">
+      <a class="download-btn" href="https://github.com/dunelly/Bluetooth-Mic-Switch/releases/download/v1.0.0/BluetoothMicSwitch.dmg">Download for macOS</a>
+      <a class="donate-btn" href="https://www.paypal.com/donate/?hosted_button_id=BX5Q3UYFAWJT6" target="_blank">
+        <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/optimize/26_Blue_PayPal_Pill_Button.png" alt="PayPal" />
+        Support Development
+      </a>
+    </div>
 
     <div class="features-screenshot">
       <section class="features">
