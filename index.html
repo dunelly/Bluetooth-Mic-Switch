@@ -4,6 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bluetooth Mic Switch App</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EJJ527E8T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8EJJ527E8T');
+
+    // Function to track button clicks
+    function trackButtonClick(action, category, label) {
+      gtag('event', action, {
+        'event_category': category,
+        'event_label': label
+      });
+    }
+  </script>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -173,8 +189,13 @@
     <p>Tired of terrible Bluetooth microphone quality on your Mac? This app automatically detects when your Bluetooth headphones connect and instantly switches the audio input to your Mac's built-in microphone. Enjoy clear audio without manual adjustments!</p>
 
     <div class="button-group">
-      <a class="download-btn" href="https://github.com/dunelly/Bluetooth-Mic-Switch/releases/download/v1.0.0/BluetoothMicSwitch.dmg">Download for macOS</a>
-      <a class="donate-btn" href="https://www.paypal.com/donate/?hosted_button_id=BX5Q3UYFAWJT6" target="_blank">
+      <a class="download-btn" 
+         href="https://github.com/dunelly/Bluetooth-Mic-Switch/releases/download/v1.0.0/BluetoothMicSwitch.dmg"
+         onclick="trackButtonClick('download', 'app', 'v1.0.0')">Download for macOS</a>
+      <a class="donate-btn" 
+         href="https://www.paypal.com/donate/?hosted_button_id=BX5Q3UYFAWJT6" 
+         target="_blank"
+         onclick="trackButtonClick('donate', 'support', 'paypal')">
         <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/optimize/26_Blue_PayPal_Pill_Button.png" alt="PayPal" />
         Buy me a coffee
       </a>
