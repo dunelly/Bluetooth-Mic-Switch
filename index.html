@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bluetooth Mic Switch App</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #212529;
+    }
+    header {
+      background: #007aff;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      display: flex; /* Use flexbox for alignment */
+      align-items: center; /* Vertically center items */
+      justify-content: center; /* Horizontally center items */
+      gap: 1rem; /* Add space between icon and text */
+    }
+    header img { /* Style for the icon */
+        max-height: 50px; /* Adjust size as needed */
+        width: auto;
+    }
+    header div { /* Container for title and subtitle */
+        text-align: left; /* Align text to the left within the div */
+    }
+    header h1, header p {
+        margin: 0; /* Remove default margins */
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      margin-top: -2rem; /* Overlap header slightly */
+      border-radius: 8px;
+      position: relative; /* Needed for the overlap effect */
+      z-index: 1; /* Ensure main content is above header bg */
+    }
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #007aff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease; /* Smooth transition */
+    }
+    .download-btn:hover {
+        background-color: #005ecb; /* Darker blue on hover */
+    }
+    .features-screenshot {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
+      align-items: flex-start; /* Align items to the top */
+    }
+    .features {
+      flex: 1 1 300px; /* Allow flex item to grow and shrink */
+      min-width: 250px; /* Minimum width before wrapping */
+    }
+    .features h3 {
+        margin-top: 0; /* Remove top margin for heading */
+    }
+    .features ul {
+        list-style: none; /* Remove default bullets */
+        padding-left: 0; /* Remove default padding */
+    }
+    .features li {
+      margin-bottom: 0.75rem; /* Space between list items */
+      padding-left: 1.5rem; /* Indent list items */
+      position: relative; /* For custom bullet positioning */
+    }
+    .features li::before { /* Custom checkmark bullet */
+        content: '✓';
+        color: #34c759; /* Green checkmark */
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    .screenshot {
+      flex: 1 1 300px; /* Allow flex item to grow and shrink */
+      min-width: 250px; /* Minimum width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .screenshot img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Enhanced shadow */
+    }
+    footer {
+      text-align: center;
+      margin: 3rem 0 2rem; /* Adjust margins */
+      font-size: 0.9rem;
+      color: #6c757d; /* Slightly adjusted color */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column; /* Stack icon and text vertically */
+            gap: 0.5rem;
+            padding: 1.5rem;
+        }
+        header div {
+            text-align: center; /* Center text on smaller screens */
+        }
+        main {
+            margin-top: -1.5rem;
+            padding: 1.5rem;
+        }
+        .features-screenshot {
+            flex-direction: column; /* Stack features and screenshot */
+            align-items: center; /* Center items when stacked */
+        }
+        .screenshot {
+            order: -1; /* Show screenshot above features */
+            margin-bottom: 2rem; /* Add space below screenshot */
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="app_icon.png" alt="Bluetooth Mic Switch Icon"> <!-- Added Icon -->
+    <div>
+        <h1>Bluetooth Mic Switch</h1>
+        <p>Fix macOS audio issues by auto-switching to your internal mic when Bluetooth connects</p>
+    </div>
+  </header>
+  <main>
+    <h2>Simple. Automatic. Reliable.</h2>
+    <p>Tired of terrible Bluetooth microphone quality on your Mac? This app automatically detects when your Bluetooth headphones connect and instantly switches the audio input to your Mac's built-in microphone. Enjoy clear audio without manual adjustments!</p>
+
+    <a class="download-btn" href="#">Download for macOS</a>
+
+    <div class="features-screenshot">
+      <section class="features">
+        <h3>Key Features:</h3>
+        <ul>
+          <li>Auto-detects Bluetooth device connections</li>
+          <li>Instantly switches input to internal mic</li>
+          <li>Set-and-forget background operation</li>
+          <li>No complex setup needed</li>
+          <li>Supports AirPods, Beats, Sony, Bose, and more</li>
+          <li>Launch at login option</li>
+        </ul>
+      </section>
+      <div class="screenshot">
+        <!-- Updated screenshot source -->
+        <img src="screenshot.png" alt="Bluetooth Mic Switch App Screenshot">
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Du Nguyen. All rights reserved.
+  </footer>
+</body>
+</html> 
